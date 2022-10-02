@@ -17,7 +17,7 @@ bool isDivisibleBy(int n, int d){
 //TASK B
 bool isPrime(int n) {
   bool prime;
-  if (n == 1){
+  if (n == 1){       //would this be a test case?
     prime = false;
     return prime;
   }
@@ -31,4 +31,7 @@ bool isPrime(int n) {
   }
   return prime;
 }
+
+//TASK C
+
 
