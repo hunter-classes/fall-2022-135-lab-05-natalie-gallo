@@ -34,4 +34,26 @@ bool isPrime(int n) {
 
 //TASK C
 
+int nextPrime(int n){
+
+  int prime_num;
+  
+  bool prime;
+
+  for (int i = n + 1; i > n; i++){
+    for (int j = i - 1; j > 1; j--) {
+      if (i % j == 0){
+	prime = false;
+	break;
+      } else if (i % j != 0){
+	prime = true;
+      }
+    }
+    if (prime == true){
+      prime_num = i;
+      break;
+    }
+  }
+  return prime_num;
+}
 

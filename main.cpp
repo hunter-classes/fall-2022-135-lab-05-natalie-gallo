@@ -21,5 +21,9 @@ int main()
   } else {
     std::cout << "No \n";
   }
+  //task c
+  int output;
+  output = nextPrime(17);
+  std::cout << "nextPrime(17) == " << output << std::endl;
   return 0;
 }
