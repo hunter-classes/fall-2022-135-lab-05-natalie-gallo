@@ -25,5 +25,8 @@ int main()
   int output;
   output = nextPrime(17);
   std::cout << "nextPrime(17) == " << output << std::endl;
+  //task d
+  output = countPrimes(7, 19);
+  std::cout << "There are " << output << " prime numbers within range. \n";
   return 0;
 }

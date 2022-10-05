@@ -41,6 +41,12 @@ int nextPrime(int n){
   bool prime;
 
   for (int i = n + 1; i > n; i++){
+    if (i == 1){
+      prime = false;
+    }
+    if (i == 2){
+      prime = true;
+    }
     for (int j = i - 1; j > 1; j--) {
       if (i % j == 0){
 	prime = false;
@@ -57,3 +63,34 @@ int nextPrime(int n){
   return prime_num;
 }
 
+//TASK D
+
+int countPrimes(int a, int b){
+
+  bool prime;
+  int counter = 0;
+
+  for (int i = a; i <= b; i++){
+    if (i == 1){
+      prime = false;
+    }
+    if (i == 2){
+      prime = true;
+    }
+    for (int j = i - 1; j > 1; j--) {
+      if (i % j == 0) {
+	prime = false;
+	break;
+      } else if (i % j != 0) {
+	prime = true;
+      }
+    }
+    if (prime == true){
+      counter = counter + 1;
+    }
+  }
+  return counter;
+}
+    
+    
+  
