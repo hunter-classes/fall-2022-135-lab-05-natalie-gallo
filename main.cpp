@@ -28,5 +28,14 @@ int main()
   //task d
   output = countPrimes(7, 19);
   std::cout << "There are " << output << " prime numbers within range. \n";
+  //task e
+  result = isTwinPrime(17);
+  if (result == true) {
+    std::cout << "Yes \n";
+  } else {
+    std::cout << "No \n";
+  }
+  //task f
+  
   return 0;
 }

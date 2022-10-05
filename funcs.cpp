@@ -91,6 +91,43 @@ int countPrimes(int a, int b){
   }
   return counter;
 }
+
+//TASK E
+
+bool isTwinPrime(int n){
+  int upper_prime = n + 2;
+  int lower_prime = n - 2;
+
+  bool prime;
+
+  for (int j = upper_prime - 1; j > 1; j--){
+    if (upper_prime % j == 0) {
+      prime = false;
+      break;
+    } else if (upper_prime % j != 0) {
+      prime = true;
+    }
+  }
+
+  if (prime != true){
+    for (int j = lower_prime - 1; j > 1; j--){
+      if (lower_prime % j == 0) {
+	prime = false;
+	break;
+      } else if (lower_prime % j != 0) {
+	prime = true;
+      }
+    }
+  }
+
+  return prime;
+}
+
+//TASK F
+
+
     
+  
+  
     
   
