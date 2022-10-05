@@ -17,7 +17,7 @@ bool isDivisibleBy(int n, int d){
 //TASK B
 bool isPrime(int n) {
   bool prime;
-  if (n == 1){       //would this be a test case?
+  if (n <= 1){       //would this be a test case?
     prime = false;
     return prime;
   }
@@ -194,6 +194,14 @@ int nextTwinPrime(int n){
     
 //TASK G
     
+int largestTwinPrime(int a, int b){
+  for (int i = b; i >= a; i--){
+    if (isTwinPrime(i) == true){
+      return i;
+    }
+  }
+  return -1;
+}
   
   
     

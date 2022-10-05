@@ -38,6 +38,9 @@ int main()
   //task f
   output = nextTwinPrime(1);
   std::cout << "nextTwinPrime(1) == " << output << std::endl;
+  //task g
+  output = largestTwinPrime(5, 18);
+  std::cout << "largestTwinPrime(5, 18) == " << output << std::endl;
   
   return 0;
 }
