@@ -36,13 +36,8 @@ int main()
     std::cout << "No \n";
   }
   //task f
-  result = nextTwinPrime(23);
-  if (result == true) {
-    std::cout << "Yes \n";
-  } else {
-    std::cout << "No \n";
-  }
-
+  output = nextTwinPrime(1);
+  std::cout << "nextTwinPrime(1) == " << output << std::endl;
   
   return 0;
 }

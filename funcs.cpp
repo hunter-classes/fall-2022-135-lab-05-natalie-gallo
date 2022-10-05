@@ -129,69 +129,70 @@ int nextTwinPrime(int n){
   int prime_num;
   
   bool prime;
-  bool twin_prime;
+  bool twin_prime = false;
   
   if (twin_prime != true){
     
     for (int i = n + 1; i > n; i++){
       if (i == 1){
-	prime = false;
+    prime = false;
       }
       if (i == 2){
-	prime = true;
+    prime = true;
       }
       for (int j = i - 1; j > 1; j--) {
-	if (i % j == 0){
-	  prime = false;
-	  break;
-	} else if (i % j != 0){
-	  prime = true;
-	}
+    if (i % j == 0){
+      prime = false;
+      break;
+    } else if (i % j != 0){
+      prime = true;
+    }
       }
       if (prime == true){
-	prime_num = i;
+    prime_num = i;
 
-	int upper_prime = prime_num + 2;
-	int lower_prime = prime_num - 2;
+    int upper_prime = prime_num + 2;
+    int lower_prime = prime_num - 2;
 
-	int twin;
+    int twin;
        
-	for (int j = upper_prime - 1; j > 1; j--){
-	  if (upper_prime % j == 0) {
-	    twin_prime = false;
-	    break;
-	  } else if (upper_prime % j != 0) {
-	    twin_prime = true;
-	  }
-	}
-	if (twin_prime == true){
-	  twin = prime_num;
-	  twin_prime = true;
-	}
+    for (int j = upper_prime - 1; j > 1; j--){
+      if (upper_prime % j == 0) {
+        twin_prime = false;
+        break;
+      } else if (upper_prime % j != 0) {
+        twin_prime = true;
+      }
+    }
+    if (twin_prime == true){
+      twin = prime_num;
+      twin_prime = true;
+      break;
+    }
 
-	if (twin_prime != true){
-	  for (int j = lower_prime - 1; j > 1; j--){
-	    if (lower_prime % j == 0) {
-	      twin_prime = false;
-	      break;
-	    } else if (lower_prime % j != 0) {
-	      twin_prime = true;
-	    }
-	  }
-	  if (twin_prime == true){
-	    twin = prime_num;
-	    twin_prime = true;
-	    break;
-	  }
-	}
-	prime = false;
+    if (twin_prime != true){
+      for (int j = lower_prime - 1; j > 1; j--){
+        if (lower_prime % j == 0) {
+          twin_prime = false;
+          break;
+        } else if (lower_prime % j != 0) {
+          twin_prime = true;
+        }
+      }
+      if (twin_prime == true){
+        twin = prime_num;
+        twin_prime = true;
+        break;
+      }
+    }
+    prime = false;
       }
     }
   }
   return prime_num;
 }
     
-
+//TASK G
     
   
   
