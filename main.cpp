@@ -9,18 +9,18 @@ int main()
   bool result;
   result = isDivisibleBy(100, 25);
   if (result == true) {
-    std::cout << "Yes \n";
+    std::cout << "True \n";
   } else {
-    std::cout << "No \n";
+    std::cout << "False \n";
   }
   // task b
   //NOTE: 1 is NOT a prime number (need to implement this)
   //UPDATE: IMPLEMENTED as well as negatives
   result = isPrime(1);
   if (result == true) {
-    std::cout << "Yes \n";
+    std::cout << "True \n";
   } else {
-    std::cout << "No \n";
+    std::cout << "False \n";
   }
   //task c
   int output;
@@ -32,9 +32,9 @@ int main()
   //task e
   result = isTwinPrime(17);
   if (result == true) {
-    std::cout << "Yes \n";
+    std::cout << "True \n";
   } else {
-    std::cout << "No \n";
+    std::cout << "False \n";
   }
   //task f
   output = nextTwinPrime(2);
